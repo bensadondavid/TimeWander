@@ -13,7 +13,6 @@ nav{
     flex-direction: row;
     justify-content: space-between;
     padding: 10px;
-
 }
 
 a{
@@ -140,24 +139,30 @@ a{
 .Home{
     width: 100%;
     height: 100vh;
-    background-position:center;
+    background-position:left;
     background-repeat: no-repeat;
     background-size: cover;
-    background-image: url('/AN.jpg');
+    background-image: url('/ANT.png');
     transition: background-image 1s;
 }
 
-.content{
-    height: 90%;
+@keyframes slide{
+    from{ transform: translateX(100%);}
+    to{transform: translateX(0);}
+}
+
+.content-container{
+    height: 70%;
     width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    overflow-y: scroll;
 }
 
 .change-btn-left{
     background-color: #fff;
-    padding: 25px;
+    padding: 10px;
     border-radius: 20px;
     rotate: 90deg;
     opacity: 50%;
@@ -166,7 +171,7 @@ a{
 
 .change-btn-right{
     background-color: #fff;
-    padding: 25px;
+    padding: 10px;
     border-radius: 20px;
     rotate: -90deg;
     opacity: 50%;
@@ -183,10 +188,33 @@ a{
     transition: opacity 0.7s;
 }
 
-.explore-btn{
-   padding: 10px 20px; 
-   font-size:large;
-   background-color: #000;
-   color: #fff;
-   border: 1px solid black;
+.content{
+    font-size: larger;
+    width: 40%;
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    opacity: 80%;
 }
+
+.discover {
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, box-shadow 0.3s;
+    font-size: 1rem;
+}
+
+
+.discover:hover {
+    background-color: #ffffff !important;
+    color: #000000 !important;
+}
+
+
+

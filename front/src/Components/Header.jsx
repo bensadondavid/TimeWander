@@ -45,7 +45,7 @@ const Header = () => {
             <nav>
                 <div className="first-nav">
                     <div className="title-btn">
-                        <Link to='/'><h3>TimeWander</h3></Link>
+                        <a href='/'><h1>TimeWander</h1></a>
                         {screenWidth <= 768 && (
                             <button className="nav-btn" onClick={handleHamBtn}>
                                 <div className="line-container">
@@ -59,6 +59,7 @@ const Header = () => {
                     {(screenWidth > 768 || hamBtn) && (
                         <div className="links">
                             <Link to='/' className="a1">Home</Link>
+                            <Link to='/store'></Link>
                             <Link to='/register' className="a2">Register</Link>
                             <Link to='/login' className="a3">Login</Link>
                         </div>

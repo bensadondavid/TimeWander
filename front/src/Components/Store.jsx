@@ -1,10 +1,13 @@
-import { configureStore } from "@reduxjs/toolkit";
-import ThemeReducer from "../Slices/ThemeSlice";
+import React from "react";
 
-export const  Store = configureStore({
-    reducer : {
-        ToggleTheme : ThemeReducer
-    }
-})
+const Store = ()=>{
 
+    return(
+        <>
+        <div className="Store">
+
+        </div>
+        </>
+    )
+}
 export default Store
