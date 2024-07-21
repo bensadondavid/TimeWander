@@ -135,8 +135,12 @@ const Home = () => {
                 <div className="content-container">
                     <button className="change-btn-left" value={theme} onClick={ChangeThemeBackward}><img src="/arrow.png" alt="Previous" /></button>
                     <div className="content" style={{ background: bgColor, color: color }}>
-                        <h3>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae modi explicabo itaque illum, quos porro quasi voluptatum,
-                            placeat doloribus sequi velit? Beatae, commodi in! Quibusdam dignissimos ipsam quis adipisci facilis.</h3>
+                        <h3>{theme === 'Antiquity' ? 'You want to discover the rich tapestry of ancient history and the captivating stories that accompany it? Let’s embark on a journey to the next page and delve into the wonders of Antiquity!' 
+                        : theme === 'Middle-age' ? 'Ready to traverse the fascinating landscapes of the Middle Ages? Come along to the next page and immerse yourself in the tales of knights, castles, and legendary quests!':
+                        theme === 'Renaissance' ? 'Curious about the rebirth of art, science, and culture? Join us on the next page to explore the marvels of the Renaissance and the stories that shaped our modern world!' :
+                        theme === 'Enlightment' ? 'Excited to uncover the age of reason and enlightenment? Move to the next page to learn about the transformative ideas and events that sparked revolutions and redefined societies!' :
+                        theme === 'Industrial Revolution' ? 'Intrigued by the era that revolutionized industry and technology? Click through to the next page to discover the innovations and stories of the Industrial Revolution that changed the world forever!' :
+                        null}</h3>
                         <button className="discover" style={{ background: buttonColor.background, color: buttonColor.color }}>Discover</button>
                     </div>
                     <button className="change-btn-right" value={theme} onClick={ChangeThemeForward}><img src="/arrow.png" alt="Next" /></button>
